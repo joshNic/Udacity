@@ -1,3 +1,3 @@
 # Udacity
-Udacity non-degree program
+Udacity non-degree program.
 The Sandwhich app Challenge
