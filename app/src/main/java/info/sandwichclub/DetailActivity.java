@@ -60,17 +60,17 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void populateUI(Sandwich sandwich) {
-        TextView alsoKnownAs = findViewById(R.id.also_known_tv);
+        TextView sandwichAlsoKnownAs = findViewById(R.id.also_known_tv);
 
         // Use the TextUtils.join to Returns a string containing the tokens joined by the delimiter
+        sandwichAlsoKnownAs.setText(TextUtils.join("\n", sandwich.getAlsoKnownAs()));
 
-        alsoKnownAs.setText(TextUtils.join("\n", sandwich.getAlsoKnownAs()));
-        TextView ingredients = findViewById(R.id.ingredients_tv);
-        ingredients.setText(TextUtils.join("\n", sandwich.getIngredients()));
-        TextView origin = findViewById(R.id.origin_tv);
-        origin.setText(sandwich.getPlaceOfOrigin());
-        TextView description = findViewById(R.id.description_tv);
-        description.setText(sandwich.getDescription());
+        TextView sandwichIngredients = findViewById(R.id.ingredients_tv);
+        sandwichIngredients.setText(TextUtils.join("\n", sandwich.getIngredients()));
+        TextView sandwichOrigin = findViewById(R.id.origin_tv);
+        sandwichOrigin.setText(sandwich.getPlaceOfOrigin());
+        TextView sandwichDescription = findViewById(R.id.description_tv);
+        sandwichDescription.setText(sandwich.getDescription());
 
     }
 }

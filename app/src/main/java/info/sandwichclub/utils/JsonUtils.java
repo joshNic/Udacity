@@ -12,9 +12,12 @@ import info.sandwichclub.model.Sandwich;
 public class JsonUtils {
 
     public static Sandwich parseSandwichJson(String json) {
+        // Create a new sandwich object
         Sandwich sandwich = new Sandwich();
         try {
+            // Create a json object
             JSONObject sandwichDetails = new JSONObject(json);
+            
             JSONObject name = sandwichDetails.getJSONObject("name");
             sandwich.setMainName(name.getString("mainName"));
             sandwich.setPlaceOfOrigin(sandwichDetails.getString("placeOfOrigin"));
